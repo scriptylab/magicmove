@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>99888DEF-FBE9-4FEE-8508-45A246800249</string>
+	<key>IDESourceControlProjectName</key>
+	<string>magicmove</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B4923A3A05CE70D05D6F2DE098E32C707C371BB9</key>
+		<string>github.com:scriptylab/magicmove.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>magicmove.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B4923A3A05CE70D05D6F2DE098E32C707C371BB9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:scriptylab/magicmove.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B4923A3A05CE70D05D6F2DE098E32C707C371BB9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B4923A3A05CE70D05D6F2DE098E32C707C371BB9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>magicmove</string>
+		</dict>
+	</array>
+</dict>
+</plist>

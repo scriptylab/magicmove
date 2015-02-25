@@ -14,6 +14,7 @@
 		D294B1E81A992E4B0021ED5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D294B1E71A992E4B0021ED5E /* Images.xcassets */; };
 		D294B1EB1A992E4B0021ED5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D294B1E91A992E4B0021ED5E /* LaunchScreen.xib */; };
 		D294B1F71A992E4B0021ED5E /* magicmoveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D294B1F61A992E4B0021ED5E /* magicmoveTests.m */; };
+		D294B2031A992E880021ED5E /* UIView+MMView.m in Sources */ = {isa = PBXBuildFile; fileRef = D294B2021A992E880021ED5E /* UIView+MMView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D294B1F01A992E4B0021ED5E /* magicmoveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = magicmoveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D294B1F51A992E4B0021ED5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D294B1F61A992E4B0021ED5E /* magicmoveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = magicmoveTests.m; sourceTree = "<group>"; };
+		D294B2011A992E880021ED5E /* UIView+MMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MMView.h"; sourceTree = "<group>"; };
+		D294B2021A992E880021ED5E /* UIView+MMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MMView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		D294B1D91A992E4B0021ED5E /* magicmove */ = {
 			isa = PBXGroup;
 			children = (
+				D294B2001A992E740021ED5E /* categories */,
 				D294B1DE1A992E4B0021ED5E /* AppDelegate.h */,
 				D294B1DF1A992E4B0021ED5E /* AppDelegate.m */,
 				D294B1E11A992E4B0021ED5E /* ViewController.h */,
@@ -117,6 +121,15 @@
 				D294B1F51A992E4B0021ED5E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D294B2001A992E740021ED5E /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				D294B2011A992E880021ED5E /* UIView+MMView.h */,
+				D294B2021A992E880021ED5E /* UIView+MMView.m */,
+			);
+			name = categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +235,7 @@
 				D294B1E31A992E4B0021ED5E /* ViewController.m in Sources */,
 				D294B1E01A992E4B0021ED5E /* AppDelegate.m in Sources */,
 				D294B1DD1A992E4B0021ED5E /* main.m in Sources */,
+				D294B2031A992E880021ED5E /* UIView+MMView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
