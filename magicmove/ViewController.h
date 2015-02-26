@@ -10,22 +10,19 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *item1;
-@property (weak, nonatomic) IBOutlet UIView *item2;
-@property (weak, nonatomic) IBOutlet UIView *item3;
+@property (weak, nonatomic) IBOutlet UIImageView *item1;
+@property (weak, nonatomic) IBOutlet UIImageView *item2;
+@property (weak, nonatomic) IBOutlet UIImageView *item3;
+@property (weak, nonatomic) IBOutlet UIImageView *item4;
 
 @property (weak, nonatomic) IBOutlet UIView *smallBox;
 @property (weak, nonatomic) IBOutlet UIView *bigBox;
 
-@property (weak, nonatomic) IBOutlet UILabel *lblInnerMargin;
 @property (weak, nonatomic) IBOutlet UILabel *lblOuterMargin;
 
 /**
  * Grouped items control
  */
-- (IBAction)decreaseInnerMargin:(id)sender;
-- (IBAction)increaseInnerMargin:(id)sender;
-
 - (IBAction)decreaseOuterMargin:(id)sender;
 - (IBAction)increaseOuterMargin:(id)sender;
 

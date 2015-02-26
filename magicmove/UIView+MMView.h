@@ -24,44 +24,19 @@
 #pragma mark - Instance methods
 
 /**
- * Moves the frame by the given X value
- * x = -10 moves frame by 10 points left
- * x = 10 moves frame by 10 points right
- *
- * @param CGFloat x
- */
-- (void)moveFrameByX:(CGFloat)x;
-
-/**
- * Moves the frame by the given Y value
- * y = -10 moves frame by 10 points up
- * y = 10 moves frame by 10 points down
- *
- * @param CGFloat y
- */
-- (void)moveFrameByY:(CGFloat)y;
-
-/**
- * Moves the frame to the given X value
- *
- * @param CGFloat x
- */
-- (void)moveFrameToX:(CGFloat)x;
-
-/**
- * Moves the frame to the given Y value
- *
- * @param CGFloat y
- */
-- (void)moveFrameToY:(CGFloat)y;
-
-/**
  * Moves frame in front of the given frame with specified margin
  *
  * @param CGRect frame
  * @param CGFloat margin
  */
-- (void)moveFrameInFrontOf:(CGRect)frame withMargin:(CGFloat)margin;
+- (void)moveInFrontOf:(CGRect)frame withMargin:(CGFloat)margin;
+
+/**
+ * Moves frame in front of the given frame
+ *
+ * @param CGRect frame
+ */
+- (void)moveInFrontOf:(CGRect)frame;
 
 /**
  * Moves frame next to the given frame with specified margin
@@ -69,7 +44,14 @@
  * @param CGRect frame
  * @param CGFloat margin
  */
-- (void)moveFrameNextTo:(CGRect)frame withMargin:(CGFloat)margin;
+- (void)moveNextTo:(CGRect)frame withMargin:(CGFloat)margin;
+
+/**
+ * Moves frame next to the given frame
+ *
+ * @param CGRect frame
+ */
+- (void)moveNextTo:(CGRect)frame;
 
 /**
  * Moves frame above the given frame with specified margin
@@ -77,7 +59,14 @@
  * @param CGRect frame
  * @param CGFloat margin
  */
-- (void)moveFrameAbove:(CGRect)frame withMargin:(CGFloat)margin;
+- (void)moveAbove:(CGRect)frame withMargin:(CGFloat)margin;
+
+/**
+ * Moves frame above the given frame
+ *
+ * @param CGRect frame
+ */
+- (void)moveAbove:(CGRect)frame;
 
 /**
  * Moves frame under the given frame with specified margin
@@ -85,7 +74,14 @@
  * @param CGRect frame
  * @param CGFloat margin
  */
-- (void)moveFrameUnder:(CGRect)frame withMargin:(CGFloat)margin;
+- (void)moveUnder:(CGRect)frame withMargin:(CGFloat)margin;
+
+/**
+ * Moves frame under the given frame
+ *
+ * @param CGRect frame
+ */
+- (void)moveUnder:(CGRect)frame;
 
 /**
  * Sets the frame origin leaving the same size
@@ -101,22 +97,6 @@
  */
 - (void)setFrameSize:(CGSize)size;
 
-/**
- * Changes the frame width by the given points
- * f.e. points = -10 reduces the frame width by 10 points
- *
- * @param CGFloat points
- */
-- (void)changeFrameWidthBy:(CGFloat)points __deprecated;
-
-/**
- * Changes the frame height by the given points
- * f.e. points = -10 reduces the frame height by 10 points
- *
- * @param CGFloat points
- */
-- (void)changeFrameHeightBy:(CGFloat)points __deprecated;
-
 #pragma mark - Horizontal alignment
 
 /**
@@ -124,51 +104,21 @@
  *
  * @param CGRect frame
  */
-- (void)alignLeftOf:(CGRect)frame;
+- (void)leftOf:(CGRect)frame;
 
 /**
  * Aligns to the center of the given frame
  *
  * @param CGRect frame
  */
-- (void)alignCenterOf:(CGRect)frame;
+- (void)centerOf:(CGRect)frame;
 
 /**
  * Aligns to the right of the given frame
  *
  * @param CGRect frame
  */
-- (void)alignRightOf:(CGRect)frame;
-
-/**
- * Aligns the view to the left in array of views
- * to the given index
- *
- * @param CGRect frame
- * @param NSUInteger index
- * @param NSArray* views;
- */
-- (void)alignLeftOf:(CGRect)frame withIndex:(NSUInteger)index inViews:(NSArray *)views;
-
-/**
- * Aligns the view to the center in array of views
- * to the given index
- *
- * @param CGRect frame
- * @param NSUInteger index
- * @param NSArray* views
- */
-- (void)alignCenterOf:(CGRect)frame withIndex:(NSUInteger)index inViews:(NSArray *)views;
-
-/**
- * Aligns the view to the center in array of views
- * to the given index
- *
- * @param CGRect frame
- * @param NSUInteger index
- * @param NSArray* views
- */
-- (void)alignRightOf:(CGRect)frame withIndex:(NSUInteger)index inViews:(NSArray *)views;
+- (void)rightOf:(CGRect)frame;
 
 #pragma mark - Vertical alignment
 
@@ -177,87 +127,21 @@
  *
  * @param CGRect frame
  */
-- (void)verticalAlignTopOf:(CGRect)frame;
+- (void)topOf:(CGRect)frame;
 
 /**
- * Sets vertical align to the center of the given frame
+ * Sets vertical align to the middle of the given frame
  *
  * @param CGRect frame
  */
-- (void)verticalAlignCenterOf:(CGRect)frame;
+- (void)middleOf:(CGRect)frame;
 
 /**
  * Sets vertical align to the bottom of the given frame
  *
  * @param CGRect frame
  */
-- (void)verticalAlignBottomOf:(CGRect)frame;
-
-/**
- * Sets vertical TOP align to self's frame by the given list
- * of items that should be ordered vertically
- *
- * for example: I have two tabs in menu (tab1 and tab2), and I want to have
- * them both in center of the menu, though they are single views.
- *
- *      TAB1   | MENU |
- *      TAB2   | MENU |
- *             | MENU |
- *             | MENU |
- *
- * First I prepare list of items: NSArray *views = @[tab1, tab2];
- * Then I call [tab1 verticalAlignTopOf:menu.frame withIndex:[views indexOfObject:tab1] inViews:views];
- * To position also tab2: [tab2 verticalAlignTopOf:menu.frame withIndex:[views indexOfObject:tab2] inViews:views];
- *
- * @param CGRect frame
- * @param NSUInteger index
- * @param NSArray* views
- */
-- (void)verticalAlignTopOf:(CGRect)frame withIndex:(NSUInteger)index inViews:(NSArray *)views;
-
-/**
- * Sets vertical CENTER align to self's frame by the given list
- * of items that should be ordered vertically
- *
- * for example: I have two tabs in menu (tab1 and tab2), and I want to have
- * them both in center of the menu, though they are single views.
- *
- *             | MENU |
- *      TAB1   | MENU |
- *      TAB2   | MENU |
- *             | MENU |
- *
- * First I prepare list of items: NSArray *views = @[tab1, tab2];
- * Then I call [tab1 verticalAlignCenterOf:menu.frame withIndex:[views indexOfObject:tab1] inViews:views];
- * To position also tab2: [tab2 verticalAlignCenterOf:menu.frame withIndex:[views indexOfObject:tab2] inViews:views];
- *
- * @param CGRect frame
- * @param NSUInteger index
- * @param NSArray* views
- */
-- (void)verticalAlignCenterOf:(CGRect)frame withIndex:(NSUInteger)index inViews:(NSArray *)views;
-
-/**
- * Sets vertical BOTTOM align to self's frame by the given list
- * of items that should be ordered vertically
- *
- * for example: I have two tabs in menu (tab1 and tab2), and I want to have
- * them both in center of the menu, though they are single views.
- *
- *             | MENU |
- *             | MENU |
- *      TAB2   | MENU |
- *      TAB1   | MENU |
- *
- * First I prepare list of items: NSArray *views = @[tab1, tab2];
- * Then I call [tab1 verticalAlignBottomOf:menu.frame withIndex:[views indexOfObject:tab1] inViews:views];
- * To position also tab2: [tab2 verticalAlignBottomOf:menu.frame withIndex:[views indexOfObject:tab2] inViews:views];
- *
- * @param CGRect frame
- * @param NSUInteger index
- * @param NSArray* views
- */
-- (void)verticalAlignBottomOf:(CGRect)frame withIndex:(NSUInteger)index inViews:(NSArray *)views;
+- (void)bottomOf:(CGRect)frame;
 
 #pragma mark - Class methods
 
@@ -274,7 +158,7 @@
  * @param NSArray* views
  * @param CGFloat leftMargin - space between left boundary and first view
  */
-+ (void)alignViewsLeftOf:(CGRect)frame views:(NSArray *)views leftMargin:(CGFloat)leftMargin;
++ (void)viewsLeftOf:(CGRect)frame views:(NSArray *)views leftMargin:(CGFloat)leftMargin;
 
 /**
  * Aligns the given array of views to left of the frame/bounds.
@@ -283,7 +167,7 @@
  * @param CGRect frame
  * @param NSArray* views
  */
-+ (void)alignViewsLeftOf:(CGRect)frame views:(NSArray *)views;
++ (void)viewsLeftOf:(CGRect)frame views:(NSArray *)views;
 
 #pragma mark Center
 
@@ -295,7 +179,7 @@
  * @param CGRect frame
  * @param NSArray* views
  */
-+ (void)alignViewsCenterOf:(CGRect)frame views:(NSArray *)views;
++ (void)viewsCenterOf:(CGRect)frame views:(NSArray *)views;
 
 #pragma mark Right
 
@@ -308,7 +192,7 @@
  * @param NSArray* views
  * @param CGFloat rightMargin - space between right boundary and last view
  */
-+ (void)alignViewsRightOf:(CGRect)frame views:(NSArray *)views rightMargin:(CGFloat)rightMargin;
++ (void)viewsRightOf:(CGRect)frame views:(NSArray *)views rightMargin:(CGFloat)rightMargin;
 
 /**
  * Aligns the given array of views to right of the frame/bounds.
@@ -317,7 +201,7 @@
  * @param CGRect frame
  * @param NSArray* views
  */
-+ (void)alignViewsRightOf:(CGRect)frame views:(NSArray *)views;
++ (void)viewsRightOf:(CGRect)frame views:(NSArray *)views;
 
 #pragma mark - Vertical alignment
 
@@ -332,7 +216,7 @@
  * @param NSArray* views
  * @param CGFloat topMargin - space between top boundary and the first view
  */
-+ (void)verticalAlignViewsTopOf:(CGRect)frame views:(NSArray *)views topMargin:(CGFloat)topMargin;
++ (void)viewsTopOf:(CGRect)frame views:(NSArray *)views topMargin:(CGFloat)topMargin;
 
 /**
  * Vertically aligns the given array of views on top of the frame/bounds.
@@ -342,7 +226,7 @@
  * @param CGRect frame
  * @param NSArray* views
  */
-+ (void)verticalAlignViewsTopOf:(CGRect)frame views:(NSArray *)views;
++ (void)viewsTopOf:(CGRect)frame views:(NSArray *)views;
 
 #pragma mark Center
 
@@ -354,7 +238,7 @@
  * @param CGRect frame
  * @param NSArray* views
  */
-+ (void)verticalAlignViewsCenterOf:(CGRect)frame views:(NSArray *)views;
++ (void)viewsMiddleOf:(CGRect)frame views:(NSArray *)views;
 
 #pragma mark Bottom
 
@@ -367,7 +251,7 @@
  * @param NSArray* views
  * @param CGFloat bottomMargin - space between top boundary and the first view
  */
-+ (void)verticalAlignViewsBottomOf:(CGRect)frame views:(NSArray *)views bottomMargin:(CGFloat)bottomMargin;
++ (void)viewsBottomOf:(CGRect)frame views:(NSArray *)views bottomMargin:(CGFloat)bottomMargin;
 
 /**
  * Vertically aligns the given array of views on top of the frame/bounds.
@@ -377,12 +261,14 @@
  * @param CGRect frame
  * @param NSArray* views
  */
-+ (void)verticalAlignViewsBottomOf:(CGRect)frame views:(NSArray *)views;
++ (void)viewsBottomOf:(CGRect)frame views:(NSArray *)views;
 
 #pragma mark - Advanced
 
 /**
- * Positions views from the given left and top blocks into the given frame.
+ * Positions views into arbitrary starting point in the given
+ * frame. You may define left and/or top blocks to declare
+ * origin of the views.
  *
  * @param CGRect frame
  * @param NSArray* views
@@ -395,7 +281,8 @@
                     top:(CGFloat (^)(CGFloat height))topBlock;
 
 /**
- * Positions views from the given left block into the given frame.
+ * Positions views into arbitrary starting point in the given
+ * frame. You may define left block to declare origin of the views.
  *
  * @param CGRect frame
  * @param NSArray* views
@@ -406,7 +293,8 @@
                    left:(CGFloat (^)(CGFloat width))leftBlock;
 
 /**
- * Positions views from the given top block into the given frame.
+ * Positions views into arbitrary starting point in the given
+ * frame. You may define top block to declare origin of the views.
  *
  * @param CGRect frame
  * @param NSArray* views
