@@ -428,6 +428,7 @@
 				D294B1FC1A992E4B0021ED5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D294B1FD1A992E4B0021ED5E /* Build configuration list for PBXNativeTarget "magicmoveTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +437,7 @@
 				D294B1FF1A992E4B0021ED5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

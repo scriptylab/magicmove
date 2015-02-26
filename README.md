@@ -7,6 +7,8 @@ This category simplifies work with views and frames in general, you want a view 
 
 Or you prefer to move a bunch of icons to another corner? [UIView viewsRightOf:self.view.bounds views:myViews rightMargin:50];
 
+![Demo screen](http://scriptylab.com/magicmove.png)
+
 ## Features
 
 - New attributes in each view

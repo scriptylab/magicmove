@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "magicmove/ViewController.m"
-            timestampString = "446636674.567705"
+            timestampString = "446637809.195134"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-reverseItems:"
             landmarkType = "5">
          </BreakpointContent>

@@ -36,6 +36,10 @@ NSInteger const kMarginStep = 5;
     [self updateMarginLabel];
 }
 
+-(BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)updateMarginLabel
 {
     self.lblOuterMargin.text = [NSString stringWithFormat:@"%ld", (long)_outerMargin];
